@@ -1,0 +1,40 @@
+.cell {
+    width: 20vh;
+    height: 20vh;
+    background-color: antiquewhite;
+}
+
+.cellCross {
+    position: relative;
+}
+
+.cellCross:before,
+.cellCross:after {
+    position: absolute;
+    left: 50%;
+    content: ' ';
+    height: 100%;
+    width: 5px;
+    background-color: #333;
+}
+
+.cellCross:before {
+    transform: rotate(45deg);
+}
+
+.cellCross:after {
+    transform: rotate(-45deg);
+}
+
+.cellCircle {
+    position: relative;
+}
+
+.cellCircle::after {
+    content: ' ';
+    border: 5px solid #333;
+    border-radius: 50%;
+    display: block;
+    height: calc(100% - 10px);
+    width: calc(100% - 10px);
+}

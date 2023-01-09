@@ -26,13 +26,37 @@
   color: rgb(112, 76, 182);
 }
 
+.gameDesk {
+  display: grid;
+  grid-template-columns: 20vh 20vh 20vh;
+  grid-gap: 5px;
+  position: relative;
+  width: fit-content;
+}
+
+.strikeLine {
+  height: 100%;
+  width: 5px;
+  background-color: brown;
+  position: absolute;
+  content: ' ';
+}
+
+.playerPanel {
+  width: 20vw;
+  height: 100vh;
+  float: left;
+}
+
 @keyframes App-logo-float {
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(10px);
   }
+
   100% {
     transform: translateY(0px);
   }
