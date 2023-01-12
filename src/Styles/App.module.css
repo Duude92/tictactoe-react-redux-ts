@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,600&display=swap');
+
 .App {
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 .App-logo {
@@ -30,22 +34,64 @@
   display: grid;
   grid-template-columns: 20vh 20vh 20vh;
   grid-gap: 5px;
+  background-color: #ec8;
   position: relative;
   width: fit-content;
+  margin: 0 auto;
 }
 
 .strikeLine {
   height: 100%;
-  width: 5px;
+  width: 10px;
   background-color: brown;
   position: absolute;
   content: ' ';
 }
 
 .playerPanel {
-  width: 20vw;
-  height: 100vh;
-  float: left;
+  /* width: 20vw; */
+  /* height: 20vh; */
+  margin: auto;
+  text-align: center;
+  font-size: 60px;
+  color: rgb(241, 241, 241);
+  /* float: left; */
+}
+
+.playerPanel p {
+  margin: auto;
+}
+
+.newGamePanel {
+  margin: 1rem auto;
+  width: fit-content;
+}
+
+input[type="button"] {
+  font-size: 2rem;
+  border: unset;
+  background-color: unset;
+  color: #fff;
+  margin: 0 3rem;
+  cursor: pointer;
+}
+
+span {
+  position: relative;
+}
+
+span .winBar {
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  background-color: #6aa;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+span .active {
+  opacity: 1;
 }
 
 @keyframes App-logo-float {

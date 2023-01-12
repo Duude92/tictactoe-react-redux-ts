@@ -1,7 +1,8 @@
 .cell {
     width: 20vh;
     height: 20vh;
-    background-color: antiquewhite;
+    background-color: #6aa
+        /* background-color: antiquewhite; */
 }
 
 .cellCross {
@@ -14,8 +15,8 @@
     left: 50%;
     content: ' ';
     height: 100%;
-    width: 5px;
-    background-color: #333;
+    width: 10px;
+    background-color: #fff;
 }
 
 .cellCross:before {
@@ -32,9 +33,9 @@
 
 .cellCircle::after {
     content: ' ';
-    border: 5px solid #333;
+    border: 10px solid #366;
     border-radius: 50%;
     display: block;
-    height: calc(100% - 10px);
-    width: calc(100% - 10px);
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
 }
