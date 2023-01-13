@@ -33,6 +33,7 @@
 .gameDesk {
   display: grid;
   grid-template-columns: 20vh 20vh 20vh;
+  grid-template-rows: 20vh 20vh 20vh;
   grid-gap: 5px;
   background-color: #ec8;
   position: relative;
@@ -42,7 +43,7 @@
 
 .strikeLine {
   height: 100%;
-  width: 10px;
+  width: 2vh;
   background-color: brown;
   position: absolute;
   content: ' ';
@@ -50,12 +51,21 @@
 
 .playerPanel {
   /* width: 20vw; */
-  /* height: 20vh; */
+  height: 22vh;
   margin: auto;
   text-align: center;
-  font-size: 60px;
+  font-size: 8vh;
   color: rgb(241, 241, 241);
   /* float: left; */
+}
+
+hr {
+  margin: auto;
+}
+
+span {
+  line-height: inherit;
+  display: block;
 }
 
 .playerPanel p {
@@ -68,7 +78,7 @@
 }
 
 input[type="button"] {
-  font-size: 2rem;
+  font-size: 4vmin;
   border: unset;
   background-color: unset;
   color: #fff;
@@ -105,5 +115,32 @@ span .active {
 
   100% {
     transform: translateY(0px);
+  }
+}
+
+@media screen and (orientation:portrait) {
+  .gameDesk {
+    grid-template-columns: 20vw 20vw 20vw;
+    grid-template-rows: 20vw 20vw 20vw;
+
+  }
+
+  input[type="button"] {
+    margin: 0 1vw 0 1vw;
+  }
+
+  .strikeLine {
+    width: 1vh;
+  }
+
+  span .winBar {
+    font-size: 4vmax;
+    line-height: 8vmax;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .playerPanel {
+    font-size: 7vmax;
   }
 }
