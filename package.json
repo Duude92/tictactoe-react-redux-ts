@@ -1,7 +1,7 @@
 {
   "name": "tictactoe",
   "version": "0.1.0",
-  "homepage": "https://duude92.github.io/Duude92/tictactoe-react-redux-ts",
+  "homepage": "https://duude92.github.io/tictactoe-react-redux-ts/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
