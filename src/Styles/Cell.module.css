@@ -12,7 +12,7 @@
 .cellCross:before,
 .cellCross:after {
     position: absolute;
-    left: 50%;
+    left: calc(50% - 0.5vh);
     content: ' ';
     height: 100%;
     width: 1vh;
@@ -37,5 +37,7 @@
     border-radius: 50%;
     display: block;
     height: calc(100% - 2vh);
-    width: calc(100% - 2vh);
+    height: -webkit-fill-available;
+    
+    /* width: calc(100% - 2vh); */
 }

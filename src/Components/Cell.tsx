@@ -2,7 +2,8 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { useAppSelector } from '../app/hooks';
 import { canMoveSelector, changeCellState, selectCellValue } from '../features/tictactoe/desk';
-import styles from '../Styles/Cell.module.css'
+import styles from '../Styles/Cell.module.css';
+
 export enum CellValue {
     NONE,
     CROSS,
@@ -36,7 +37,7 @@ export const Cell = (props: CellProps) => {
     }
 
     return (
-        <div onClick={CellClick} className={`${styles.cell} ${(((cellState.cellValue === CellValue.CROSS) && styles.cellCross) || ((cellState.cellValue == CellValue.CIRCLE) && styles.cellCircle))}`} />
+        <div onClick={CellClick} className={`${styles.cell} ${(((cellState.cellValue === CellValue.CROSS) && styles.cellCross) || ((cellState.cellValue === CellValue.CIRCLE) && styles.cellCircle))}`} />
     )
 
 }

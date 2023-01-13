@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500,600&display=swap');
 
+:root {
+  --line-thickness: 2vh;
+}
+
 .App {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
@@ -43,7 +47,7 @@
 
 .strikeLine {
   height: 100%;
-  width: 2vh;
+  width: var(--line-thickness);
   background-color: brown;
   position: absolute;
   content: ' ';
@@ -104,6 +108,10 @@ span .active {
   opacity: 1;
 }
 
+.activePlayer {
+  color: yellow;
+}
+
 @keyframes App-logo-float {
   0% {
     transform: translateY(0);
@@ -129,9 +137,13 @@ span .active {
     margin: 0 1vw 0 1vw;
   }
 
-  .strikeLine {
-    width: 1vh;
+  :root {
+    --line-thickness: 1vh;
   }
+
+  /* .strikeLine {
+    width: 1vh;
+  } */
 
   span .winBar {
     font-size: 4vmax;

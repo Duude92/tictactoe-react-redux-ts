@@ -66,7 +66,7 @@ function App() {
             transformOrigin: 'top'
           } :
             gameResult.Line === WinningLine.ROW ? {
-              left: `calc(33.33%*${gameResult.index + 0.5})`
+              left: `calc((33.33%*${gameResult.index + 0.5}) - (var(--line-thickness) / 2))`
             } :
               gameResult.Line === WinningLine.SECONDARYDIAGONAL ? {
                 transform: 'rotate(45deg)',
